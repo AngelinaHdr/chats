@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:test33/main1.dart';
-import 'package:test33/pages/HomePage.dart';
+import 'HomePage.dart'; // Assuming HomePage.dart contains your home page widget
+import 'ChatPages.dart'; // Assuming ChatPages.dart contains your chat page widget
 
 void main(){
   runApp(MyApp());
-
 }
 
 class MyApp extends StatelessWidget{
@@ -13,15 +12,15 @@ class MyApp extends StatelessWidget{
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        scaffoldBackgroundColor: Color(0xFFF5F5F3),
-        appBarTheme: AppBarTheme(
-          backgroundColor: Color(0xFFF5F5F3),
-          foregroundColor: Colors.black,
-        )
+          scaffoldBackgroundColor: Color(0xFFF5F5F3),
+          appBarTheme: AppBarTheme(
+            backgroundColor: Color(0xFFF5F5F3),
+            foregroundColor: Colors.black,
+          )
       ),
       routes: {
         "/": (context) => HomePage(),
-        "chatPages": (context) => ChatPage(),
+        "chatPage": (context) => ChatPage(), // Corrected route name
       },
     );
   }
