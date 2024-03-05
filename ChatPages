@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:test33/ChatBottomSheet.dart';
-import 'package:test33/ChatSample.dart';
+import 'ChatBottomSheet.dart';
+import 'ChatSample.dart';
 
 class ChatPage extends StatelessWidget{
   @override
@@ -33,7 +33,7 @@ class ChatPage extends StatelessWidget{
               Padding(
                 padding: EdgeInsets.only(right:25),
                 child: Icon(Icons.call,
-                color: Color(0xFF113953),
+                  color: Color(0xFF113953),
                 ),
               ),
               Padding(
@@ -51,10 +51,9 @@ class ChatPage extends StatelessWidget{
         padding: EdgeInsets.only(top: 20, left: 20, right:20, bottom: 80),
         children: [
           ChatSample()
-            ])
-bottomSheet: ChatBottomSheet(),
-
-
+        ]
+      ),
+      bottomSheet: ChatBottomSheet(),
     );
   }
 }
