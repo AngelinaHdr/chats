@@ -7,7 +7,7 @@ class ChatPage extends StatelessWidget{
   Widget build(BuildContext context){
     return Scaffold(
       appBar: PreferredSize(
-        prefferedSize: Size.fromHeight(70.0),
+        preferredSize: Size.fromHeight(70.0),
         child: Padding(
           padding: EdgeInsets.only(top:5),
           child: AppBar(
