@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'ChatBottomSheet.dart';
 import 'ChatSample.dart';
+import 'EditChat.dart'; // Import the EditChat page
 
 class ChatPage extends StatelessWidget{
   @override
@@ -24,7 +25,7 @@ class ChatPage extends StatelessWidget{
               Padding(
                 padding: EdgeInsets.only(left:10),
                 child: Text(
-                  "Mark",
+                  "Maths",
                   style: TextStyle(color: Color(0xFF113953)),
                 ),
               ),
@@ -38,9 +39,18 @@ class ChatPage extends StatelessWidget{
               ),
               Padding(
                 padding: EdgeInsets.only(right:10),
-                child: Icon(
-                  Icons.more_vert,
-                  color: Color(0xFF113953),
+                child: IconButton( // Changed from Icon to IconButton
+                  icon: Icon(
+                    Icons.more_vert,
+                    color: Color(0xFF113953),
+                  ),
+                  onPressed: () {
+                    // Navigate to the EditChat page
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => EditChat()),
+                    );
+                  },
                 ),
               ),
             ],
@@ -48,10 +58,10 @@ class ChatPage extends StatelessWidget{
         ),
       ),
       body: ListView(
-        padding: EdgeInsets.only(top: 20, left: 20, right:20, bottom: 80),
-        children: [
-          ChatSample()
-        ]
+          padding: EdgeInsets.only(top: 20, left: 20, right:20, bottom: 80),
+          children: [
+            ChatSample()
+          ]
       ),
       bottomSheet: ChatBottomSheet(),
     );
